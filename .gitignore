@@ -1,0 +1,13 @@
+data/raw/
+data/sample/
+data/output/
+*.csv
+!tests/*.py
+__pycache__/
+*.pyc
+.terraform/
+terraform.tfstate*
+terraform.tfvars
+keys/
+*.json
+.venv/

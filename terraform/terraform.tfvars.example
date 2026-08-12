@@ -1,0 +1,3 @@
+gcp_project = "your-gcp-project-id"
+gcp_region  = "US"
+dataset_id  = "olist_analytics"
