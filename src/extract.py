@@ -13,6 +13,7 @@ def get_spark(app_name: str = "olist-pipeline") -> SparkSession:
     return (
         SparkSession.builder.appName(app_name)
         # local[*] uses all cores on the machine running it -- fine for laptop-scale
+        
         # (~100k orders); swap for a real master URL if this ever moves to a cluster.
         .master("local[*]")
         .config("spark.sql.shuffle.partitions", "8")  # see README: default 200 is
