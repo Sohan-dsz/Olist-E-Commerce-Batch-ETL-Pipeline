@@ -25,6 +25,7 @@ def get_or_create_dataset(client: bigquery.Client, project: str, dataset_id: str
     try:
         client.get_dataset(dataset_ref)
         logger.info(f"Dataset {dataset_ref} already exists")
+        
     except NotFound:
         dataset = bigquery.Dataset(dataset_ref)
         dataset.location = location
